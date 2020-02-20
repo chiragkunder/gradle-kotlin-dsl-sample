@@ -1,4 +1,5 @@
 import org.gradle.kotlin.dsl.`kotlin-dsl`
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     `kotlin-dsl`
@@ -28,6 +29,11 @@ buildscript {
 repositories {
     jcenter()
     google()
+}
+
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.kotlinOptions {
+    languageVersion = "1.3"
 }
 
 dependencies {
