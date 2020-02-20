@@ -8,9 +8,9 @@ plugins {
 
 gradlePlugin {
     plugins {
-        register("common-config") {
-            id = "common-config"
-            implementationClass = "com.ckundr.plugins.CommonConfiguration"
+        register("common-binary-plugin") {
+            id = "common-binary-plugin"
+            implementationClass = "com.ckundr.plugins.CommonBinaryPlugin"
         }
     }
 }

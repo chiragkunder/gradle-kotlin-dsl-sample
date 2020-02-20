@@ -3,7 +3,7 @@ import com.ckundr.plugins.kotlinProject
 import com.ckundr.plugins.unitTestDependencies
 
 plugins {
-    id("common-config-precompiled")
+    id("common-precompiled")
 }
 
 dependencies {

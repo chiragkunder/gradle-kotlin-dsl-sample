@@ -5,7 +5,7 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
 
-class CommonConfiguration : Plugin<Project> {
+class CommonBinaryPlugin : Plugin<Project> {
 
     private val Project.android: BaseExtension
         get() = extensions.findByName("android") as? BaseExtension
