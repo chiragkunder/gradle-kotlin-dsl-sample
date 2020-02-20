@@ -13,7 +13,7 @@ object Versions {
     const val applicationVersionName = "1.0.0"
 
     // Android
-    const val appcompat = "1.0.2"
+    const val appcompat = "1.1.0"
 
     // Testing
     const val junit = "4.12"
@@ -25,6 +25,9 @@ object Libraries {
 
     // Kotlin
     const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
+
+    // Android
+    const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
 
     // Testing
     const val junit = "junit:junit:${Versions.junit}"

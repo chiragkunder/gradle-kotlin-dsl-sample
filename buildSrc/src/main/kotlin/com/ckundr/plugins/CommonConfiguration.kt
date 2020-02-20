@@ -13,15 +13,18 @@ class CommonConfiguration : Plugin<Project> {
 
     override fun apply(project: Project) =
         with(project) {
-            plugins.run {
-                apply("com.android.library")
-                apply("kotlin-android")
-                apply("kotlin-android-extensions")
-            }
-
+            applyPlugins()
             androidConfig()
             dependenciesConfig()
         }
+
+    private fun Project.applyPlugins() {
+        plugins.run {
+            apply("com.android.library")
+            apply("kotlin-android")
+            apply("kotlin-android-extensions")
+        }
+    }
 
     private fun Project.androidConfig() {
         android.run {
@@ -42,7 +45,7 @@ class CommonConfiguration : Plugin<Project> {
     }
 
     private fun Project.dependenciesConfig() {
-        project.dependencies {
+        dependencies {
             "implementation"("androidx.appcompat:appcompat:1.1.0")
         }
     }
