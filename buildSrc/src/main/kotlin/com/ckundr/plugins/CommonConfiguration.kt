@@ -11,10 +11,17 @@ class CommonConfiguration : Plugin<Project> {
         get() = extensions.findByName("android") as? BaseExtension
             ?: error("Not an Android module: $name")
 
-    override fun apply(project: Project) {
-        project.androidConfig()
-        project.dependenciesConfig()
-    }
+    override fun apply(project: Project) =
+        with(project) {
+            plugins.run {
+                apply("com.android.library")
+                apply("kotlin-android")
+                apply("kotlin-android-extensions")
+            }
+
+            androidConfig()
+            dependenciesConfig()
+        }
 
     private fun Project.androidConfig() {
         android.run {

@@ -3,9 +3,6 @@ import com.ckundr.plugins.kotlinProject
 import com.ckundr.plugins.unitTestDependencies
 
 plugins {
-    id("com.android.library")
-    id("kotlin-android")
-    id("kotlin-android-extensions")
     id("common-config")
 }
 
