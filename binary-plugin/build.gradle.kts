@@ -5,7 +5,6 @@ import com.ckundr.plugins.unitTestDependencies
 plugins {
     id("common-binary-plugin")
 }
-
 dependencies {
     kotlinProject()
     unitTestDependencies()

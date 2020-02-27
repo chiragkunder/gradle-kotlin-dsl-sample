@@ -4,6 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     `kotlin-dsl`
     `kotlin-dsl-precompiled-script-plugins`
+    id("java-library")
 }
 
 gradlePlugin {
@@ -11,6 +12,10 @@ gradlePlugin {
         register("common-binary-plugin") {
             id = "common-binary-plugin"
             implementationClass = "com.ckundr.plugins.CommonBinaryPlugin"
+        }
+        register("module-const-generator") {
+            id = "module-const-generator"
+            implementationClass = "com.ckundr.plugins.ModuleConstGenerator"
         }
     }
 }
@@ -42,4 +47,5 @@ dependencies {
     implementation("com.android.tools.build:gradle-api:3.4.2")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.61")
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.61")
+    implementation("com.squareup:kotlinpoet:1.3.0")
 }

@@ -21,6 +21,10 @@ android {
     }
 }
 
+sourceSets {
+
+}
+
 dependencies {
     implementation("androidx.appcompat:appcompat:1.1.0")
 }

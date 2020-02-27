@@ -24,6 +24,8 @@ allprojects {
     }
 }
 
+apply(plugin="module-const-generator")
+
 tasks.register<Delete>("clean") {
     delete(rootProject.buildDir)
 }
