@@ -3,7 +3,7 @@ package com.ckundr.plugins
 object Versions {
 
     // Project
-    const val kotlin = "1.3.61"
+    const val kotlin = "1.4.30"
 
     const val compileSdkVersion = 29
     const val minSdkVersion = 23
