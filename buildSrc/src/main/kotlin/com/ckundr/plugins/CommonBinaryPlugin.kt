@@ -22,7 +22,6 @@ class CommonBinaryPlugin : Plugin<Project> {
         plugins.run {
             apply("com.android.library")
             apply("kotlin-android")
-            apply("kotlin-android-extensions")
         }
     }
 
