@@ -1,25 +1,23 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    extra["kotlin_version"] = "1.4.30"
+    apply(from = "common.gradle.kts")
     repositories {
         google()
         jcenter()
-
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:4.1.2")
-        classpath(kotlin("gradle-plugin", version = "1.4.30"))
+        classpath(rootProject.extra["androidGradlePlugin"].toString())
+        classpath(rootProject.extra["kotlinPlugin"].toString())
     }
 }
 
 allprojects {
-    repositories {
-        google()
-        jcenter()
-    }
+    apply(from = "${rootDir.path}/common.gradle.kts")
 }
 
 tasks.register<Delete>("clean") {
-    delete(rootProject.buildDir)
+    allprojects {
+        delete(buildDir)
+    }
 }

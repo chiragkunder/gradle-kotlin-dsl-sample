@@ -1,3 +1,4 @@
+import com.ckundr.plugins.Versions
 import com.ckundr.plugins.androidApplicationConfig
 import org.jetbrains.kotlin.config.KotlinCompilerVersion
 
@@ -6,7 +7,7 @@ plugins {
     id("kotlin-android")
 }
 
-androidApplicationConfig(com.ckundr.plugins.Versions.applicationId)
+androidApplicationConfig(Versions.applicationId)
 
 dependencies {
     implementation(kotlin("stdlib", KotlinCompilerVersion.VERSION))

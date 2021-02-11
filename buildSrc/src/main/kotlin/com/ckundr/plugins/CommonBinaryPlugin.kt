@@ -27,10 +27,10 @@ class CommonBinaryPlugin : Plugin<Project> {
 
     private fun Project.androidConfig() {
         android.run {
-            compileSdkVersion(29)
+            compileSdkVersion(30)
             defaultConfig {
                 minSdkVersion(23)
-                targetSdkVersion(29)
+                targetSdkVersion(30)
                 versionCode = 1
                 versionName = "1.0"
                 testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -45,7 +45,7 @@ class CommonBinaryPlugin : Plugin<Project> {
 
     private fun Project.dependenciesConfig() {
         dependencies {
-            "implementation"("androidx.appcompat:appcompat:1.1.0")
+            "implementation"("androidx.appcompat:appcompat:1.2.0")
         }
     }
 }

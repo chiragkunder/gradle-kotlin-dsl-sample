@@ -5,18 +5,18 @@ object Versions {
     // Project
     const val kotlin = "1.4.30"
 
-    const val compileSdkVersion = 29
+    const val compileSdkVersion = 30
     const val minSdkVersion = 23
-    const val targetSdkVersion = 29
+    const val targetSdkVersion = 30
     const val applicationId = "com.ckundr.gradle_kotlin_dsl_sample"
     const val applicationVersionCode = 1
     const val applicationVersionName = "1.0.0"
 
     // Android
-    const val appcompat = "1.1.0"
+    const val appcompat = "1.2.0"
 
     // Testing
-    const val junit = "4.12"
+    const val junit = "4.13.1"
     const val testRunner = "1.1.1"
     const val espressoCore = "3.1.1"
 }
