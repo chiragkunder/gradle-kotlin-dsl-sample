@@ -1,5 +1,7 @@
-include(":script-plugin")
-include(":precompiled")
-include(":binary-plugin")
-include(":app")
+include(
+    ":script-plugin",
+    ":precompiled",
+    ":binary-plugin",
+    ":app"
+)
 rootProject.name = "gradle-kotlin-dsl-sample"
